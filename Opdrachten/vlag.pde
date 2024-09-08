@@ -1,5 +1,4 @@
 
-void setup(){
 
       println("leren progameren");
         print("4011");
@@ -17,6 +16,6 @@ void setup(){
                    strokeWeight(35);
                    line(6,81,400,88);
                                    
- }
+
   
   

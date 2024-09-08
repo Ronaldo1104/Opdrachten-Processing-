@@ -1,6 +1,5 @@
 
-void setup(){
-  
+
   
   
      print("4011");
@@ -12,6 +11,5 @@ void setup(){
                 text("ik extra text zet'" ,10, 40);
        background(100,100,100);                               
    
- }
-  
+
   
