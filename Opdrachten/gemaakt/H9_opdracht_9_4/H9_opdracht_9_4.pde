@@ -5,8 +5,10 @@ void setup(){
 
 void draw(){
   background(0,0,0);
-  //rect(100,100,100,100);
+
   stroke(255,255,255);
+  
+ //rect(100,100,100,100);
 vierkant(100,100,100,100);
 }
   
