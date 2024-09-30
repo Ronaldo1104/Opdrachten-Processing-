@@ -8,5 +8,3 @@ void setup(){
 void draw(){
   board.display();
 }
-// ik heb dit gekeken op youtube maar ik heb geprobeerd de 
-// code te begrijpen en voor de meeste begrijp ik het wel
