@@ -1,59 +1,38 @@
-class Bullet {
-  // variables
-
-
-  float x;
-  float y;
-  float d;
-  float speed;
-
+class Bullet { //<>//
+  float x, y, d, speed;
   boolean shouldRemove;
 
-
-  // constructor
-  Bullet(float startingX, float startingY){
+  Bullet(float startingX, float startingY) {
     x = startingX;
     y = startingY;
-
-    // D = de groote van de bullets
-     d = 10;
+    d = 10;
     speed = 15;
-
     shouldRemove = false;
-
-
   }
 
-  void render(){
-    //Dit zijn circles of tegelijkertijd bullets
+  void render() {
     circle(x, y, d);
-  
   }
 
-  void move(){
+  void move() {
     y -= speed;      
-
   }
-  void checkRemove(){
-    if (y < 0){
+
+  void checkRemove() {
+    if (y < 0) {
       shouldRemove = true;
-      y -= speed;      
- 
     }
   }
   
-  String toString(){
-    return ""+y;
-  }
-
-  void shootEnemy(Enemy anEnemy){
- 
-      if (y - (d/2) <= anEnemy.y + anEnemy.h && x + (d/2) >= anEnemy.x && x - (d/2) <= anEnemy.x + anEnemy.w) {
-        
-       // anEnemy.shouldRemove = true; //<>//
-        
-        anEnemy.reset();
-       shouldRemove = true;
+  boolean shootEnemy(Enemy anEnemy) {
+    if (y - (d / 2) <= anEnemy.y + anEnemy.h && 
+        x + (d / 2) >= anEnemy.x && 
+        x - (d / 2) <= anEnemy.x + anEnemy.w) {
+      
+      anEnemy.reset();
+      shouldRemove = true;
+      return true; // Indicates the enemy was hit
     }
+    return false; // No hit
   }
 }
